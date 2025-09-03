@@ -5,10 +5,18 @@
   --text-muted: #a1a1aa;
   --neon-pink: #ff2aad;
   --neon-green: #39ff14;
+
+  /* light theme vars (mobile) */
+  --light-bg: #fffafc;
+  --light-card: #ffffff;
+  --light-text: #1f2937;
+  --light-muted: #4b5563;
+  --light-pink: #ec4899;
+  --light-green: #22c55e;
 }
 
 body {
-  font-family: "Impact", "Segoe UI", Arial, sans-serif;
+  font-family: "Impact", "Segoe UI", "Arial", "sans-serif";
   margin: 0;
   padding: 0;
   text-align: center;
@@ -98,61 +106,50 @@ ul li:hover {
   transform: translateY(-3px);
 }
 
-/* ----------------- Responsive ----------------- */
+/* Mobile Light Theme */
 @media (max-width: 768px) {
-  .container {
-    padding: 1.5rem;
+  body {
+    background: linear-gradient(180deg, var(--light-bg), #f0fff4);
+    color: var(--light-text);
   }
 
   img.profile {
-    width: 120px;
-    height: 120px;
+    border: 5px solid var(--light-pink);
+    box-shadow: none;
   }
 
   h1 {
-    font-size: 2rem;
+    color: var(--light-green);
+    text-shadow: none;
   }
 
   .desc {
-    font-size: 0.95rem;
-  }
-
-  ul li {
-    font-size: 0.95rem;
-    padding: 0.6rem 0.8rem;
-  }
-
-  .contact a {
-    padding: 0.6rem 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  img.profile {
-    width: 100px;
-    height: 100px;
-  }
-
-  h1 {
-    font-size: 1.7rem;
+    color: var(--light-muted);
   }
 
   h2 {
-    font-size: 1.2rem;
-  }
-
-  .desc {
-    font-size: 0.9rem;
+    color: var(--light-pink);
+    text-shadow: none;
   }
 
   ul li {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.7rem;
+    background: var(--light-card);
+    color: var(--light-green);  
+
+
+    border-left: 6px solid var(--light-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  ul li:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
   }
 
   .contact a {
-    font-size: 0.9rem;
-    padding: 0.5rem 0.9rem;
+    background: var(--light-green);
+    color: #fff;
+    box-shadow: none;
+  }
+  .contact a:hover {
+    background: var(--light-pink);
   }
 }
